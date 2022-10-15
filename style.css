@@ -1,0 +1,143 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  background-color: hsl(204, 43%, 93%);
+  color: hsl(204, 43%, 93%);
+}
+
+.text-highlight-cyan {
+  color: hsl(179, 62%, 43%);
+}
+
+.text-highlight-brightyellow {
+  color: hsl(71, 73%, 54%);
+}
+
+.text-highlight-white {
+  color: white;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.price-tag {
+  display: flex;
+  align-items: center;
+}
+
+.price {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+h1 {
+  font-size: 1.25rem;
+}
+
+h2 {
+  font-size: 1.125rem;
+}
+
+.container {
+  align-self: center;
+  margin: 3rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  border-radius: .5rem;
+  overflow: hidden;
+}
+
+.card {
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.community {
+  background-color: white;
+  color: hsl(218, 22%, 67%);
+}
+
+.community p {
+  line-height: 1.75rem;
+}
+
+.subscription {
+  background-color: hsl(179, 62%, 43%);
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  align-self: center;
+  margin-top: 1rem;
+  min-width: 18rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 
+    transform .2s ease-in-out, 
+    box-shadow .2s ease-in-out;
+}
+
+.button:hover {
+  cursor: pointer;
+  transform: scale(1.025);
+  box-shadow: 0px 0px 10px 0px hsl(218, 22%, 67%);
+}
+
+.button-bg-color {
+  background-color: hsl(71, 73%, 54%);
+}
+
+.why-us {
+  background-color: hsl(180, 56%, 59%);
+}
+
+.why-us p {
+  line-height: 1.75rem;
+}
+
+/* desktop design */
+
+@media screen and (min-width: 850px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "community community"
+    "subscription why-us";
+    max-width: 1000px;
+  }
+
+  .card {
+    min-width: 25rem;
+  }
+
+  .community {
+    grid-area: community;
+  }
+
+  .subscription {
+    grid-area: subscription;
+  }
+
+  .why-us {
+    grid-area: why-us;
+  }
+
+  .card-padding {
+    padding: 3rem;
+  }
+}
+
+
